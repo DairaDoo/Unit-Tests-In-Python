@@ -7,6 +7,7 @@ def db():
     database = Database()
     yield database
     database.data.clear() # used in real databases to clean up (not needed for in-memory)
+
 def test_add_user(db):
     db.add_user("1", "Maria")
     assert db.get_user("1") == "Maria"
