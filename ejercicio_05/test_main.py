@@ -2,7 +2,7 @@ import pytest
 from main import get_weather
 
 def test_get_weather(mocker):
-    # Mock requests.get
+    # Mock requests.get to fake what is returned by the API
     mock_get = mocker.patch("main.requests.get")
 
     # Set return values
